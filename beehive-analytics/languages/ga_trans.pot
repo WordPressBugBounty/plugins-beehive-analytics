@@ -2,14 +2,14 @@
 # This file is distributed under the GNU General Public License (Version 2 - GPLv2).
 msgid ""
 msgstr ""
-"Project-Id-Version: Beehive Pro 3.5.2\n"
+"Project-Id-Version: Beehive Pro 3.5.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/build\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-03-31T15:03:35+00:00\n"
+"POT-Creation-Date: 2026-10-05T07:40:55+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: ga_trans\n"
@@ -2508,7 +2508,6 @@ msgstr ""
 msgid "Site not here? Try logging into another <a href=\"%s\">Google account</a>"
 msgstr ""
 
-#. translators: %s Google account setup link.
 #: core/modules/google-analytics/data/class-locale.php:215
 msgid "Note: Currently your statistics are provided from network wide measurement ID. You can increase stats accuracy by logging in and configuring your own stream."
 msgstr ""
@@ -2634,7 +2633,7 @@ msgstr ""
 msgid "The date in YYYY-MM-DD format."
 msgstr ""
 
-#: core/modules/google-analytics/stats/formatters/class-ga4.php:957
+#: core/modules/google-analytics/stats/formatters/class-ga4.php:997
 msgid "Other"
 msgstr ""
 

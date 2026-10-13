@@ -9,7 +9,7 @@
  * Description: Enables Google Analytics for your site with statistics inside WordPress admin panel. Single and multi site compatible!
  * Author:      WPMU DEV
  * Author URI:  https://wpmudev.com
- * Version:     3.5.2
+ * Version:     3.5.3
  * License:     GNU General Public License (Version 2 - GPLv2)
  * Text Domain: ga_trans
  * Domain Path: /languages
@@ -43,7 +43,7 @@ if ( ! defined( 'BEEHIVE_PLUGIN_FILE' ) ) {
 
 // Plugin version.
 if ( ! defined( 'BEEHIVE_VERSION' ) ) {
-	define( 'BEEHIVE_VERSION', '3.5.1' );
+	define( 'BEEHIVE_VERSION', '3.5.3' );
 }
 
 // Auto load classes.

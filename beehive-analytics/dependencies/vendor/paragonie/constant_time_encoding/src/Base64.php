@@ -58,10 +58,7 @@ abstract class Base64 implements EncoderInterface
      *
      * @throws TypeError
      */
-    public static function encode(
-        #[SensitiveParameter]
-        string $binString
-    ) : string
+    public static function encode(#[\SensitiveParameter] string $binString) : string
     {
         if (extension_loaded('sodium')) {
             switch (static::class) {
@@ -94,10 +91,7 @@ abstract class Base64 implements EncoderInterface
      *
      * @throws TypeError
      */
-    public static function encodeUnpadded(
-        #[SensitiveParameter]
-        string $src
-    ) : string
+    public static function encodeUnpadded(#[\SensitiveParameter] string $src) : string
     {
         if (extension_loaded('sodium')) {
             switch (static::class) {
@@ -127,11 +121,7 @@ abstract class Base64 implements EncoderInterface
      *
      * @throws TypeError
      */
-    protected static function doEncode(
-        #[SensitiveParameter]
-        string $src,
-        bool $pad = \true
-    ) : string
+    protected static function doEncode(#[\SensitiveParameter] string $src, bool $pad = \true) : string
     {
         $dest = '';
         $srcLen = Binary::safeStrlen($src);
@@ -176,11 +166,7 @@ abstract class Base64 implements EncoderInterface
      * @throws RangeException
      * @throws TypeError
      */
-    public static function decode(
-        #[SensitiveParameter]
-        string $encodedString,
-        bool $strictPadding = \false
-    ) : string
+    public static function decode(#[\SensitiveParameter] string $encodedString, bool $strictPadding = \false) : string
     {
         // Remove padding
         $srcLen = Binary::safeStrlen($encodedString);
@@ -272,10 +258,7 @@ abstract class Base64 implements EncoderInterface
      * @param string $encodedString
      * @return string
      */
-    public static function decodeNoPadding(
-        #[SensitiveParameter]
-        string $encodedString
-    ) : string
+    public static function decodeNoPadding(#[\SensitiveParameter] string $encodedString) : string
     {
         $srcLen = Binary::safeStrlen($encodedString);
         if ($srcLen === 0) {

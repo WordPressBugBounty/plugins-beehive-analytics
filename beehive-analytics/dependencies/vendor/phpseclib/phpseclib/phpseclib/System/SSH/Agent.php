@@ -34,7 +34,6 @@ namespace Beehive\phpseclib3\System\SSH;
 use Beehive\phpseclib3\Common\Functions\Strings;
 use Beehive\phpseclib3\Crypt\Common\PublicKey;
 use Beehive\phpseclib3\Crypt\PublicKeyLoader;
-use Beehive\phpseclib3\Crypt\RSA;
 use Beehive\phpseclib3\Exception\BadConfigurationException;
 use Beehive\phpseclib3\Net\SSH2;
 use Beehive\phpseclib3\System\SSH\Agent\Identity;

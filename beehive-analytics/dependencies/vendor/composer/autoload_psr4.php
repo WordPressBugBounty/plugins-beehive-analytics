@@ -6,6 +6,7 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
+    'Symfony\\Polyfill\\Php80\\' => array($vendorDir . '/symfony/polyfill-php80'),
     'Beehive\\phpseclib3\\' => array($vendorDir . '/phpseclib/phpseclib/phpseclib'),
     'Beehive\\Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Beehive\\Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-factory/src', $vendorDir . '/psr/http-message/src'),

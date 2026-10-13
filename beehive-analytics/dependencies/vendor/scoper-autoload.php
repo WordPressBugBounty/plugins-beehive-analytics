@@ -6,6 +6,9 @@ $loader = require_once __DIR__.'/autoload.php';
 
 // Exposed classes. For more information see:
 // https://github.com/humbug/php-scoper/blob/master/docs/configuration.md#exposing-classes
+if (!class_exists('ComposerAutoloaderInit05585a7007b0c22648915e12825720af', false) && !interface_exists('ComposerAutoloaderInit05585a7007b0c22648915e12825720af', false) && !trait_exists('ComposerAutoloaderInit05585a7007b0c22648915e12825720af', false)) {
+    spl_autoload_call('Beehive\ComposerAutoloaderInit05585a7007b0c22648915e12825720af');
+}
 if (!class_exists('Google_Task_Composer', false) && !interface_exists('Google_Task_Composer', false) && !trait_exists('Google_Task_Composer', false)) {
     spl_autoload_call('Beehive\Google_Task_Composer');
 }
@@ -66,17 +69,9 @@ if (!class_exists('Google_Task_Runner', false) && !interface_exists('Google_Task
 if (!class_exists('Google_Utils_UriTemplate', false) && !interface_exists('Google_Utils_UriTemplate', false) && !trait_exists('Google_Utils_UriTemplate', false)) {
     spl_autoload_call('Beehive\Google_Utils_UriTemplate');
 }
-if (!class_exists('ComposerAutoloaderInit95a9cb99040879c07ca75f5eb33103eb', false) && !interface_exists('ComposerAutoloaderInit95a9cb99040879c07ca75f5eb33103eb', false) && !trait_exists('ComposerAutoloaderInit95a9cb99040879c07ca75f5eb33103eb', false)) {
-    spl_autoload_call('Beehive\ComposerAutoloaderInit95a9cb99040879c07ca75f5eb33103eb');
-}
 
 // Exposed functions. For more information see:
 // https://github.com/humbug/php-scoper/blob/master/docs/configuration.md#exposing-functions
-if (!function_exists('oauth2client_php_autoload')) {
-    function oauth2client_php_autoload() {
-        return \Beehive\oauth2client_php_autoload(...func_get_args());
-    }
-}
 if (!function_exists('trigger_deprecation')) {
     function trigger_deprecation() {
         return \Beehive\trigger_deprecation(...func_get_args());
@@ -85,6 +80,11 @@ if (!function_exists('trigger_deprecation')) {
 if (!function_exists('zend_monitor_custom_event')) {
     function zend_monitor_custom_event() {
         return \Beehive\zend_monitor_custom_event(...func_get_args());
+    }
+}
+if (!function_exists('oauth2client_php_autoload')) {
+    function oauth2client_php_autoload() {
+        return \Beehive\oauth2client_php_autoload(...func_get_args());
     }
 }
 

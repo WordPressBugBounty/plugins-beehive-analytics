@@ -783,15 +783,16 @@ class GA4 extends Formatter {
 	 * Format the summary data to required format.
 	 *
 	 * @since 3.4.0
+	 * @since 3.5.3 Match rows using the dateRange dimension.
 	 *
 	 * @param array $data Report data from Google.
 	 *
 	 * @return array
 	 */
 	private function summary( $data ) {
-		// Summary data should be single array.
-		$current  = isset( $data[0]['metrics'] ) ? $data[0]['metrics'] : array();
-		$previous = isset( $data[1]['metrics'] ) ? $data[1]['metrics'] : array();
+		// GA4 does not guarantee the row order, so match rows by date range.
+		$current  = $this->get_date_range_metrics( $data, 0 );
+		$previous = $this->get_date_range_metrics( $data, 1 );
 
 		// Format summary data.
 		$summary = array(
@@ -838,6 +839,45 @@ class GA4 extends Formatter {
 		$summary['average_sessions']['trend'] = $this->trend_value( 'averageSessionDuration', $summary['average_sessions']['value'], $summary['average_sessions']['previous'] );
 
 		return $summary;
+	}
+
+	/**
+	 * Get the metrics of a date range from a multi date range report.
+	 *
+	 * GA4 does not guarantee the row order of multi date range reports,
+	 * so rows are matched using the dateRange dimension. The row position
+	 * is used only when the dimension is not available in the response.
+	 *
+	 * @since 3.5.3
+	 *
+	 * @param array $rows  Report rows.
+	 * @param int   $index Date range index (0 for current, 1 for previous).
+	 *
+	 * @return array
+	 */
+	private function get_date_range_metrics( $rows, $index ) {
+		// GA4 labels the date ranges as date_range_0, date_range_1 and so on.
+		$range     = 'date_range_' . $index;
+		$has_range = false;
+
+		foreach ( (array) $rows as $row ) {
+			if ( ! isset( $row['dimensions']['dateRange'] ) ) {
+				continue;
+			}
+
+			$has_range = true;
+
+			if ( $range === $row['dimensions']['dateRange'] ) {
+				return isset( $row['metrics'] ) ? $row['metrics'] : array();
+			}
+		}
+
+		// Fallback to row position only when date ranges are not labelled.
+		if ( ! $has_range && isset( $rows[ $index ]['metrics'] ) ) {
+			return $rows[ $index ]['metrics'];
+		}
+
+		return array();
 	}
 
 	/**

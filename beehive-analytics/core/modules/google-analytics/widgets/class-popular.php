@@ -308,6 +308,8 @@ class Popular extends Widget {
 			// Post IDs.
 			$post_ids = array();
 
+			$allowed_post_types = apply_filters( 'beehive_popular_widget_post_types', array( 'post', 'page' ) );
+
 			foreach ( $urls as $url ) {
 				// We need only few items.
 				if ( count( $post_ids ) >= $count ) {
@@ -329,8 +331,8 @@ class Popular extends Widget {
 					continue;
 				}
 
-				// Only if a valid post.
-				if ( 'post' !== get_post_type( $post_id ) ) {
+				// Only if a valid post type.
+				if ( ! in_array( get_post_type( $post_id ), $allowed_post_types, true ) ) {
 					continue;
 				}
 

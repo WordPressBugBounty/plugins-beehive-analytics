@@ -993,14 +993,17 @@ class GA4 extends Request {
 		// If its in subdirectory mode, then set correct beginning for page path.
 		if ( count( $url_parts ) > 1 ) {
 			unset( $url_parts[0] );
-			$page_path = implode( '/', $url_parts );
 
-			// Get page path filter.
-			$page_path_filter = $this->get_dimension_filter( array( 'pagePath' => "^/$page_path/.*" ), 'FULL_REGEXP' );
+			$page_path = rtrim( implode( '/', $url_parts ), '/' );
 
-			// Set path filter.
-			if ( ! empty( $page_path_filter ) ) {
-				$filters = array_merge( $page_path_filter, $filters );
+			if ( ! empty( $page_path ) ) {
+				// Get page path filter.
+				$page_path_filter = $this->get_dimension_filter( array( 'pagePath' => "^/$page_path(/.*)?$" ), 'FULL_REGEXP' );
+
+				// Set path filter.
+				if ( ! empty( $page_path_filter ) ) {
+					$filters = array_merge( $page_path_filter, $filters );
+				}
 			}
 		}
 
