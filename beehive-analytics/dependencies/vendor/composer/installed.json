@@ -31,6 +31,7 @@
                 "paragonie\/sodium_compat": "Support EdDSA (Ed25519) signatures when libsodium is not present"
             },
             "time": "2023-12-01T16:26:39+00:00",
+            "published-time": "2023-12-01T16:26:58+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -105,6 +106,7 @@
                 "cache\/filesystem-adapter": "For caching certs and tokens (using Google\\Client::setCache)"
             },
             "time": "2024-01-03T17:27:58+00:00",
+            "published-time": "2024-01-03T17:28:18+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -160,6 +162,7 @@
                 "phpunit\/phpunit": "^5.7||^8.5.13"
             },
             "time": "2024-05-11T01:02:11+00:00",
+            "published-time": "2024-05-13T01:41:57+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -221,6 +224,7 @@
                 "phpseclib\/phpseclib": "May be used in place of OpenSSL for signing strings or for token management. Please require version ^2."
             },
             "time": "2024-12-11T18:15:11+00:00",
+            "published-time": "2024-12-11T18:16:42+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -285,6 +289,7 @@
                 "psr\/log": "Required for using the Log middleware"
             },
             "time": "2022-06-20T22:16:13+00:00",
+            "published-time": "2022-06-20T22:24:41+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -395,6 +400,7 @@
                 "symfony\/phpunit-bridge": "^4.4 || ^5.1"
             },
             "time": "2023-05-21T12:31:43+00:00",
+            "published-time": "2023-05-21T13:01:33+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -457,17 +463,17 @@
         },
         {
             "name": "guzzlehttp\/psr7",
-            "version": "2.13.1",
-            "version_normalized": "2.13.1.0",
+            "version": "2.13.3",
+            "version_normalized": "2.13.3.0",
             "source": {
                 "type": "git",
                 "url": "https:\/\/github.com\/guzzle\/psr7.git",
-                "reference": "95e7828100de18b4e269fb1703be530082d5166d"
+                "reference": "6d3cd8285a97eaa352956a4ada92fa03ecce1c4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https:\/\/api.github.com\/repos\/guzzle\/psr7\/zipball\/95e7828100de18b4e269fb1703be530082d5166d",
-                "reference": "95e7828100de18b4e269fb1703be530082d5166d",
+                "url": "https:\/\/api.github.com\/repos\/guzzle\/psr7\/zipball\/6d3cd8285a97eaa352956a4ada92fa03ecce1c4e",
+                "reference": "6d3cd8285a97eaa352956a4ada92fa03ecce1c4e",
                 "shasum": ""
             },
             "require": {
@@ -491,7 +497,8 @@
             "suggest": {
                 "laminas\/laminas-httphandlerrunner": "Emit PSR-7 responses"
             },
-            "time": "2026-08-24T09:13:11+00:00",
+            "time": "2026-11-12T15:57:42+00:00",
+            "published-time": "2026-11-12T15:58:42+00:00",
             "type": "library",
             "extra": {
                 "bamarni-bin": {
@@ -559,7 +566,7 @@
             ],
             "support": {
                 "issues": "https:\/\/github.com\/guzzle\/psr7\/issues",
-                "source": "https:\/\/github.com\/guzzle\/psr7\/tree\/2.13.1"
+                "source": "https:\/\/github.com\/guzzle\/psr7\/tree\/2.13.3"
             },
             "funding": [
                 {
@@ -636,6 +643,7 @@
                 "ruflin\/elastica": "Allow sending log messages to an Elastic Search server"
             },
             "time": "2026-09-02T07:57:24+00:00",
+            "published-time": "2026-09-02T09:39:43+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -705,6 +713,7 @@
                 "vimeo\/psalm": "^1|^2|^3|^4"
             },
             "time": "2025-09-24T15:12:37+00:00",
+            "published-time": "2025-09-24T15:13:04+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -778,6 +787,7 @@
                 "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
             },
             "time": "2020-10-15T08:29:30+00:00",
+            "published-time": "2020-10-15T08:34:16+00:00",
             "type": "library",
             "installation-source": "dist",
             "notification-url": "https:\/\/packagist.org\/downloads\/",
@@ -807,17 +817,17 @@
         },
         {
             "name": "phpseclib\/phpseclib",
-            "version": "3.0.57",
-            "version_normalized": "3.0.57.0",
+            "version": "3.0.58",
+            "version_normalized": "3.0.58.0",
             "source": {
                 "type": "git",
                 "url": "https:\/\/github.com\/phpseclib\/phpseclib.git",
-                "reference": "d17e0ddaeaf6f22f7e007cbb437d78792fe2a0e4"
+                "reference": "91f3a6436bb84040ac0cf49e761977f17d16a39b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https:\/\/api.github.com\/repos\/phpseclib\/phpseclib\/zipball\/d17e0ddaeaf6f22f7e007cbb437d78792fe2a0e4",
-                "reference": "d17e0ddaeaf6f22f7e007cbb437d78792fe2a0e4",
+                "url": "https:\/\/api.github.com\/repos\/phpseclib\/phpseclib\/zipball\/91f3a6436bb84040ac0cf49e761977f17d16a39b",
+                "reference": "91f3a6436bb84040ac0cf49e761977f17d16a39b",
                 "shasum": ""
             },
             "require": {
@@ -835,7 +845,8 @@
                 "ext-mcrypt": "Install the Mcrypt extension in order to speed up a few other cryptographic operations.",
                 "ext-openssl": "Install the OpenSSL extension in order to speed up a wide variety of cryptographic operations."
             },
-            "time": "2026-08-26T12:13:21+00:00",
+            "time": "2026-11-02T10:45:48+00:00",
+            "published-time": "2026-11-02T10:50:21+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -900,7 +911,7 @@
             ],
             "support": {
                 "issues": "https:\/\/github.com\/phpseclib\/phpseclib\/issues",
-                "source": "https:\/\/github.com\/phpseclib\/phpseclib\/tree\/3.0.57"
+                "source": "https:\/\/github.com\/phpseclib\/phpseclib\/tree\/3.0.58"
             },
             "funding": [
                 {
@@ -937,6 +948,7 @@
                 "php": ">=5.3.0"
             },
             "time": "2016-08-06T20:24:11+00:00",
+            "published-time": "2016-08-06T23:00:13+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -990,6 +1002,7 @@
                 "psr\/http-message": "^1.0 || ^2.0"
             },
             "time": "2023-09-23T14:17:50+00:00",
+            "published-time": "2023-09-23T14:18:12+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1045,6 +1058,7 @@
                 "psr\/http-message": "^1.0 || ^2.0"
             },
             "time": "2024-04-15T12:06:14+00:00",
+            "published-time": "2024-05-10T07:32:19+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1102,6 +1116,7 @@
                 "php": "^7.2 || ^8.0"
             },
             "time": "2023-04-04T09:54:51+00:00",
+            "published-time": "2023-04-04T09:55:35+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1158,6 +1173,7 @@
                 "php": ">=5.3.0"
             },
             "time": "2021-05-03T11:20:27+00:00",
+            "published-time": "2021-05-03T11:22:56+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -1215,6 +1231,7 @@
                 "phpunit\/phpunit": "^5 || ^6.5"
             },
             "time": "2019-03-08T08:55:37+00:00",
+            "published-time": "2019-03-08T09:01:32+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1258,6 +1275,7 @@
                 "php": ">=7.1"
             },
             "time": "2024-09-25T14:11:13+00:00",
+            "published-time": "2024-11-27T12:25:26+00:00",
             "type": "library",
             "extra": {
                 "thanks": {
@@ -1328,6 +1346,7 @@
                 "php": ">=7.2"
             },
             "time": "2026-09-25T15:50:05+00:00",
+            "published-time": "2026-09-30T10:23:35+00:00",
             "type": "library",
             "extra": {
                 "thanks": {

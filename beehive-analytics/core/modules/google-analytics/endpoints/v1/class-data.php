@@ -63,7 +63,7 @@ class Data extends Endpoint {
 				array(
 					'methods'             => 'GET',
 					'callback'            => array( $this, 'accounts' ),
-					'permission_callback' => array( $this, 'public_permission' ),
+					'permission_callback' => array( $this, 'settings_permission' ),
 					'args'                => array(
 						'network' => array(
 							'required'    => false,
@@ -82,7 +82,7 @@ class Data extends Endpoint {
 				array(
 					'methods'             => 'GET',
 					'callback'            => array( $this, 'properties' ),
-					'permission_callback' => array( $this, 'public_permission' ),
+					'permission_callback' => array( $this, 'settings_permission' ),
 					'args'                => array(
 						'account' => array(
 							'required'    => true,
@@ -106,7 +106,7 @@ class Data extends Endpoint {
 				array(
 					'methods'             => 'GET',
 					'callback'            => array( $this, 'streams' ),
-					'permission_callback' => array( $this, 'public_permission' ),
+					'permission_callback' => array( $this, 'settings_permission' ),
 					'args'                => array(
 						'property' => array(
 							'required'    => true,

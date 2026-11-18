@@ -50,6 +50,8 @@ class Free extends Base {
 
 		// Initialize Cross Sell module.
 		add_action( 'init', array( $this, 'init_cross_sell' ) );
+		// Load before the module's init callbacks, including during admin AJAX.
+		add_action( 'init', array( $this, 'init_black_friday' ), 0 );
 		add_filter( 'beehive_assets_scripts_common_localize_vars', array( $this, 'localize_vars' ), 10, 2 );
 		/**
 		 * Action hook to trigger after initializing all free features.
@@ -151,6 +153,26 @@ class Free extends Base {
 		);
 
 		$cross_sell = new \WPMUDEV\Modules\Plugin_Cross_Sell( $submenu_params );
+	}
+
+	/**
+	 * Load the shared Black Friday campaign for free plugin admin screens.
+	 *
+	 * @since 3.5.4
+	 *
+	 * @return void
+	 */
+	public function init_black_friday() {
+		if ( ! is_admin() || class_exists( '\\WPMUDEV\\Modules\\BlackFriday\\Campaign' ) ) {
+			return;
+		}
+
+		$campaign_file = BEEHIVE_DIR . '/core/external/wpmudev-black-friday/campaign.php';
+
+		if ( file_exists( $campaign_file ) ) {
+			require_once $campaign_file;
+			new \WPMUDEV\Modules\BlackFriday\Campaign();
+		}
 	}
 
 	/**
